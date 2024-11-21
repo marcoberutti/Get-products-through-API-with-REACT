@@ -1,11 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Categories from "./Categories";
+import Products from "./Products";
 
 function App() {
+  const [selectedCategory, setSelectedCategory] = useState('jewelery')
+
+  // function handleClick(category){
+  //   setSelectedCategory(category)
+  // }
+
   return (
-    <div className="test App">
-      test
-      <a href="https://www.google.com">ciao</a>
+    <div>
+      <Categories handleClick={setSelectedCategory}/>
+      <hr/>
+      <Products category={selectedCategory} />
     </div>
   );
 }

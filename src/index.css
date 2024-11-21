@@ -5,9 +5,96 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 10px;
+  background-color: azure;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h2 {
+  text-align: center;
+}
+
+.categoriesContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+hr {
+  width: 80%;
+  border: 1px grey solid thin;
+}
+
+.categoriesContainer button{
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.categoriesContainer button:hover{
+  background-color: antiquewhite;
+  transform: scale(1.1);
+}  
+
+.productsFlex {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  background-color: lightgray;
+  width: 260px;
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 100px 250px 200px 50px;
+  grid-template-areas: 
+  'title'
+  'img'
+  'description'
+  'price'
+  ;
+  border-radius: 10px;
+}
+
+.product h3{
+  font-size: 1.1rem;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  grid-area: title;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.product img{
+  grid-area: img;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  margin: auto auto;
+}
+
+.product .description{
+  grid-area: description;
+  margin-bottom: 5px;
+  overflow: auto;
+  text-overflow: ellipsis;
+}
+
+.product .price{
+  display: flex;
+  align-items: center;
+  margin-top: 5px; 
+  height: 15px;
+  grid-area: price;
+  background-color: beige;
+  width: max-content;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-left: 60%;
 }
